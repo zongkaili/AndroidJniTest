@@ -71,8 +71,28 @@ public class HiJni {
         }
 ```
 
-### 调用本地方法
+### 编写Android.mk文件
 ```java
+    LOCAL_PATH := $(call my-dir)  
+    
+    include $(CLEAR_VARS)  
+    
+    LOCAL_MODULE    := HelloJni  
+    LOCAL_SRC_FILES := HelloJni.c   
+    #增加 log 函数对应的log 库  liblog.so  libthread_db.a  
+    LOCAL_LDLIBS += -llog  
+    
+    include $(BUILD_SHARED_LIBRARY) 
+```
+
+### load动态库，调用本地方法
+```java
+    static {
+        System.loadLibrary("myjni");
+    }
+    
+    
+
     HelloJni helloJni = new HelloJni()
     helloJni.javaCallCToAdd(2 , 3)
 ```
