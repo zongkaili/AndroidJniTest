@@ -4,7 +4,7 @@ android关于jni的一个测试demo，简单介绍了Android中java调c和c调�
 
 ## 效果图
 
-![pic](https://github.com/LineChen/FlikerProgressBar/blob/master/screenshot/screenshot.gif)
+![pic](https://github.com/zongkaili/AndroidJniTest/blob/master/screenshot/jnitest.gif)
 
 ## 使用
 
