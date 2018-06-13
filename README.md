@@ -53,7 +53,9 @@ public class HiJni {
  
     JNIEXPORT jint JNICALL Java_com_kelly_jnitest_HelloJni_javaCallCToAdd
     (JNIEnv *, jobject, jint, jint);
-    
+   注：如果生成头文件失败，可尝试在javah命令之前执行set classpath=E:\projects\JniTest\app\src\main\java
+   然后执行javah -d jni com.kelly.jnitest.HelloJni
+
  
 ### 建立.c/.cpp文件，实现.h中声明的方法，方法名必须一致
 ```java
